@@ -3,6 +3,8 @@
 A GNOME Shell extension (GNOME 45–51) that shows the current MPRIS track in the
 top panel.
 
+![Tunebar panel label and popup](docs/screenshot.png)
+
 - Panel: album-art icon, `{title} – {artist}` label (scrolls when it does not
   fit), previous / play-pause / next.
 - Popup (click the label): album art (click to raise the player), title,
@@ -20,7 +22,7 @@ make enable           # or: gnome-extensions enable tunebar@hafeezshuaib.github.
 ```
 
 On Wayland the shell only picks up new or changed extension code after you log
-out and back in. To test without logging out, run a nested shell (GNOME 50+
+out and back in. To run without logging out, run a nested shell (GNOME 50+
 needs the `mutter-devkit` package):
 
 ```sh
