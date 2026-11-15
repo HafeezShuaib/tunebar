@@ -1,0 +1,122 @@
+/* Panel */
+.tunebar-panel-box {
+  spacing: 4px;
+}
+
+.tunebar-panel-label-box {
+  spacing: 6px;
+}
+
+.tunebar-panel-art {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+}
+
+.tunebar-panel-art.has-art {
+  background-size: cover;
+}
+
+.tunebar-scroll-box {
+  spacing: 40px;
+}
+
+.tunebar-panel-control {
+  padding: 0 2px;
+  border-radius: 99px;
+}
+
+.tunebar-panel-control:hover {
+  color: #fff;
+}
+
+/* Popup */
+.tunebar-popup-box {
+  width: 280px;
+  padding: 8px 12px;
+  spacing: 6px;
+}
+
+.tunebar-art {
+  width: 220px;
+  height: 220px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+  background-color: rgba(127, 127, 127, 0.15);
+}
+
+.tunebar-art.has-art {
+  background-color: transparent;
+  background-size: cover;
+}
+
+.tunebar-title {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.tunebar-artist {
+  font-size: 0.95em;
+}
+
+.tunebar-seek-box {
+  spacing: 2px;
+  margin-top: 4px;
+}
+
+.tunebar-time {
+  font-size: 0.8em;
+  font-feature-settings: "tnum";
+}
+
+.tunebar-controls {
+  spacing: 6px;
+  margin-top: 2px;
+}
+
+.tunebar-control-button {
+  padding: 8px;
+  border-radius: 99px;
+}
+
+.tunebar-control-button StIcon {
+  icon-size: 16px;
+}
+
+.tunebar-play-button StIcon {
+  icon-size: 24px;
+}
+
+.tunebar-control-button:hover,
+.tunebar-control-button:focus,
+.tunebar-player-button:hover,
+.tunebar-player-button:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.tunebar-control-button:checked {
+  color: #3584e4;
+}
+
+.tunebar-player-row {
+  spacing: 6px;
+  margin-top: 6px;
+}
+
+.tunebar-player-button {
+  padding: 6px;
+  border-radius: 8px;
+  border-bottom: 2px solid transparent;
+}
+
+.tunebar-player-button StIcon {
+  icon-size: 24px;
+}
+
+.tunebar-player-button:checked {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.tunebar-player-button.pinned {
+  border-bottom-color: #3584e4;
+}

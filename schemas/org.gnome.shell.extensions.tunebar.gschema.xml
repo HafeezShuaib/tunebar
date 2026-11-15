@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.tunebar" path="/org/gnome/shell/extensions/tunebar/">
+    <key name="position" type="s">
+      <choices>
+        <choice value="left"/>
+        <choice value="center"/>
+        <choice value="right"/>
+      </choices>
+      <default>'center'</default>
+      <summary>Panel box the indicator is placed in</summary>
+    </key>
+    <key name="index" type="i">
+      <range min="0" max="50"/>
+      <default>0</default>
+      <summary>Position of the indicator inside its panel box</summary>
+    </key>
+    <key name="label-width" type="i">
+      <range min="40" max="1000"/>
+      <default>220</default>
+      <summary>Maximum width of the track label in pixels</summary>
+    </key>
+    <key name="scroll-label" type="b">
+      <default>true</default>
+      <summary>Scroll the label when it does not fit (otherwise ellipsize)</summary>
+    </key>
+    <key name="label-format" type="s">
+      <default>'{title} – {artist}'</default>
+      <summary>Label format</summary>
+      <description>Tokens: {title}, {artist}, {album}, {player}. Separators next to empty tokens are dropped.</description>
+    </key>
+    <key name="show-art-icon" type="b">
+      <default>true</default>
+      <summary>Show album art (or the player icon) in the panel</summary>
+    </key>
+    <key name="show-controls" type="b">
+      <default>true</default>
+      <summary>Show previous/play/next buttons in the panel</summary>
+    </key>
+    <key name="hide-shell-media-notification" type="b">
+      <default>false</default>
+      <summary>Hide GNOME Shell's own media controls in the notification list</summary>
+    </key>
+    <key name="blacklist" type="as">
+      <default>[]</default>
+      <summary>Ignored players</summary>
+      <description>Matched case-insensitively against the bus-name suffix, Identity and DesktopEntry.</description>
+    </key>
+    <key name="pinned-player" type="s">
+      <default>''</default>
+      <summary>Pinned player</summary>
+      <description>Always prefer this player while it is running. Matched like blacklist entries. Empty means no pin.</description>
+    </key>
+  </schema>
+</schemalist>
