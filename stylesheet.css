@@ -74,8 +74,9 @@
   margin-top: 2px;
 }
 
-.tunebar-control-button {
+.icon-button.flat.tunebar-control-button {
   padding: 8px;
+  min-height: 0;
   border-radius: 99px;
 }
 
@@ -87,15 +88,35 @@
   icon-size: 24px;
 }
 
-.tunebar-control-button:hover,
-.tunebar-control-button:focus,
-.tunebar-player-button:hover,
-.tunebar-player-button:focus {
-  background-color: rgba(255, 255, 255, 0.12);
+/* Shuffle / loop "on": filled with the accent colour, like the shell's
+   quick-settings toggles. Hover and focus when off come from the theme's
+   .icon-button.flat rules. GNOME 45/46 have no accent colour: fixed blue. */
+.icon-button.flat.tunebar-control-button:checked {
+  color: #ffffff;
+  background-color: #3584e4;
 }
 
-.tunebar-control-button:checked {
-  color: #3584e4;
+.icon-button.flat.tunebar-control-button:checked:hover,
+.icon-button.flat.tunebar-control-button:checked:focus {
+  background-color: st-lighten(#3584e4, 8%);
+}
+
+.icon-button.flat.tunebar-control-button:checked:active {
+  background-color: st-darken(#3584e4, 6%);
+}
+
+.tunebar-accent .icon-button.flat.tunebar-control-button:checked {
+  color: -st-accent-fg-color;
+  background-color: -st-accent-color;
+}
+
+.tunebar-accent .icon-button.flat.tunebar-control-button:checked:hover,
+.tunebar-accent .icon-button.flat.tunebar-control-button:checked:focus {
+  background-color: st-lighten(-st-accent-color, 8%);
+}
+
+.tunebar-accent .icon-button.flat.tunebar-control-button:checked:active {
+  background-color: st-darken(-st-accent-color, 6%);
 }
 
 .tunebar-player-row {
@@ -103,8 +124,9 @@
   margin-top: 6px;
 }
 
-.tunebar-player-button {
+.icon-button.flat.tunebar-player-button {
   padding: 6px;
+  min-height: 0;
   border-radius: 8px;
   border-bottom: 2px solid transparent;
 }
@@ -113,10 +135,10 @@
   icon-size: 24px;
 }
 
-.tunebar-player-button:checked {
-  background-color: rgba(255, 255, 255, 0.18);
+.icon-button.flat.tunebar-player-button.pinned {
+  border-bottom-color: #3584e4;
 }
 
-.tunebar-player-button.pinned {
-  border-bottom-color: #3584e4;
+.tunebar-accent .icon-button.flat.tunebar-player-button.pinned {
+  border-bottom-color: -st-accent-color;
 }
