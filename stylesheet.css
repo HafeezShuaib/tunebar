@@ -75,9 +75,19 @@
 }
 
 .icon-button.flat.tunebar-control-button {
-  padding: 8px;
+  /* Explicit size: GNOME 45-46 give .icon-button extra padding, a minimum
+     height and a 1px border, which would turn the circles into pills. */
+  width: 32px;
+  height: 32px;
+  padding: 0;
   min-height: 0;
+  border-width: 0;
   border-radius: 99px;
+}
+
+.icon-button.flat.tunebar-control-button.tunebar-play-button {
+  width: 40px;
+  height: 40px;
 }
 
 .tunebar-control-button StIcon {
@@ -125,10 +135,13 @@
 }
 
 .icon-button.flat.tunebar-player-button {
-  padding: 6px;
+  width: 36px;
+  height: 34px;
+  padding: 0;
   min-height: 0;
-  border-radius: 8px;
+  border-width: 0;
   border-bottom: 2px solid transparent;
+  border-radius: 8px;
 }
 
 .tunebar-player-button StIcon {
