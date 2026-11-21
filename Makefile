@@ -3,7 +3,7 @@ ZIP       := $(UUID).shell-extension.zip
 SCHEMA    := schemas/org.gnome.shell.extensions.tunebar.gschema.xml
 SOURCES   := metadata.json extension.js prefs.js stylesheet.css $(wildcard lib/*.js) $(SCHEMA)
 
-.PHONY: all schemas pack install uninstall enable disable prefs check nested log clean
+.PHONY: all schemas pack install uninstall enable disable prefs check lint nested log clean
 
 all: pack
 
@@ -37,6 +37,10 @@ check:
 	@for f in extension.js prefs.js lib/*.js; do \
 		node --check --input-type=module < $$f || { echo "syntax error in $$f"; exit 1; }; \
 	done; echo "syntax OK"
+
+# ESLint with GNOME's rules (needs `npm install` once).
+lint:
+	npx eslint extension.js prefs.js lib
 
 # Nested GNOME Shell (50+: --devkit; older: --nested --wayland).
 nested: install

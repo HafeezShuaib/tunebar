@@ -1,0 +1,14 @@
+{
+  "name": "tunebar",
+  "private": true,
+  "type": "module",
+  "description": "Development tooling only; the extension itself has no dependencies.",
+  "scripts": {
+    "lint": "eslint extension.js prefs.js lib"
+  },
+  "devDependencies": {
+    "@eslint/config-helpers": "^0.7.0",
+    "eslint": "^9.39.5",
+    "eslint-config-gnome": "git+https://gitlab.gnome.org/World/javascript/eslint-config-gnome.git#c479d059e8d9ea99c3b53c2ea43abf7fdb05eb51"
+  }
+}

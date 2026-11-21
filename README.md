@@ -106,8 +106,8 @@ The active player is, in order:
   `St.BoxLayout` `orientation` (48+) vs `vertical`.
 - **Hiding GNOME's media card** is opt-in. It patches only instance
   properties on private objects, every path is guarded, and the change is
-  undone on disable or when the setting is turned off. On 49+ it hooks
-  `MessageView`; on 45–48 it hooks `MediaSection`.
+  undone on disable or when the setting is turned off. On 48+ it hooks
+  `MessageView`; on 45–47 it hooks `MediaSection`.
 - GType names are namespaced `Tunebar_*`.
 
 ## Layout
