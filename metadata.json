@@ -1,9 +1,17 @@
 {
   "uuid": "tunebar@hafeezshuaib.github.io",
   "name": "Tunebar",
-  "description": "Shows the current MPRIS track in the top panel with playback controls, album art, a seek bar and a player switcher.",
-  "shell-version": ["45", "46", "47", "48", "49", "50", "51"],
+  "description": "Shows the current MPRIS track in the top panel with playback controls, album art, a seek bar and a player switcher. Album art served over the web is downloaded and cached in ~/.cache/tunebar.",
+  "shell-version": [
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50",
+    "51"
+  ],
   "settings-schema": "org.gnome.shell.extensions.tunebar",
-  "url": "https://github.com/hafeezshuaib/tunebar",
+  "url": "https://github.com/HafeezShuaib/tunebar",
   "version-name": "1.0"
 }
