@@ -3,6 +3,7 @@ import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import {ArtCache} from './lib/artCache.js';
 import {ShellMediaHider} from './lib/compat.js';
+import {clearIfaceInfo} from './lib/mpris.js';
 import {PanelButton} from './lib/panelButton.js';
 import {PlayerManager} from './lib/playerManager.js';
 
@@ -37,6 +38,8 @@ export default class TunebarExtension extends Extension {
 
         this._artCache?.destroy();
         this._artCache = null;
+
+        clearIfaceInfo();
 
         this._settings = null;
     }
