@@ -22,15 +22,16 @@ make enable           # or: gnome-extensions enable tunebar@hafeezshuaib.github.
 ```
 
 On Wayland the shell only picks up new or changed extension code after you log
-out and back in. To run without logging out, run a nested shell (GNOME 50+
-needs the `mutter-devkit` package):
+out and back in. To run without logging out, run a nested shell. On GNOME 49
+and later this needs your distribution's mutter devkit package (`mutter-dev-bin`
+on Ubuntu):
 
 ```sh
 dbus-run-session -- gnome-shell --devkit --wayland
 ```
 
-On GNOME 45–48 use `gnome-shell --nested --wayland` instead. To watch for
-errors:
+On GNOME 45–48 the flag is `--nested` instead
+(`dbus-run-session -- gnome-shell --nested --wayland`). To watch for errors:
 
 ```sh
 journalctl -f -o cat /usr/bin/gnome-shell
